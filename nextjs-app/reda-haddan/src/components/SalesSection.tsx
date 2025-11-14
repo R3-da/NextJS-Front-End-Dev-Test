@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Linkedin, Mail } from "lucide-react";
 
@@ -20,6 +23,31 @@ const salesTeam = [
 ];
 
 export default function SalesSection() {
+  const [navbarHeight, setNavbarHeight] = useState(0);
+  const [showNavbar, setShowNavbar] = useState(true);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const heroHeight = window.innerHeight;
+
+      setShowNavbar(scrollY < heroHeight || scrollY < lastScrollY);
+
+      lastScrollY = scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    const navbar = document.querySelector("nav");
+    if (navbar) setNavbarHeight(navbar.clientHeight);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const stickyTop = showNavbar ? navbarHeight + 24 : 24;
+
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-6 flex flex-col lg:flex-row lg:items-start lg:gap-12">
@@ -85,7 +113,10 @@ export default function SalesSection() {
         </div>
 
         {/* Sticky Text Section */}
-        <div className="lg:w-1/2 mt-12 lg:mt-0 flex flex-col justify-start text-left sticky top-24">
+        <div
+          className="lg:w-1/2 mt-12 lg:mt-0 flex flex-col justify-start text-left sticky transition-all duration-300"
+          style={{ top: `${stickyTop}px` }}
+        >
           <p className="text-slate-600 mb-2 tracking-wide uppercase text-sm">Meet our</p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-slate-900 mb-4">
             Sales Team

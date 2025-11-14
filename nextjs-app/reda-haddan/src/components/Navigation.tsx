@@ -14,12 +14,12 @@ export default function Navigation() {
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      const heroHeight = window.innerHeight * 0.5; // hide sooner at 50% of hero
 
-      // Hide navbar when scrolling down past hero (assume hero height 100vh)
-      if (currentScrollY > window.innerHeight) {
+      if (currentScrollY > heroHeight) {
         setShowNavbar(currentScrollY < lastScrollY); // show only if scrolling up
       } else {
-        setShowNavbar(true); // always visible on hero
+        setShowNavbar(true); // always visible in top half of hero
       }
 
       lastScrollY = currentScrollY;
@@ -27,15 +27,13 @@ export default function Navigation() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Determine navbar classes
   const navbarClasses = `
     fixed top-0 left-0 right-0 z-50 transition-transform duration-300
     ${showNavbar ? "translate-y-0" : "-translate-y-full"}
-    ${scrollY < window.innerHeight && !isOpen ? "bg-transparent backdrop-blur-0" : "bg-black/20 backdrop-blur-md"}
+    ${scrollY < window.innerHeight * 0.5 && !isOpen ? "bg-transparent backdrop-blur-0" : "bg-black/20 backdrop-blur-md"}
   `;
 
   return (

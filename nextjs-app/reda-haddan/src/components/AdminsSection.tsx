@@ -6,23 +6,23 @@ import { Linkedin, Mail } from "lucide-react";
 
 const salesTeam = [
   {
-    name: "Samy Yemmas",
+    name: "Salim El Bouzidi",
     role: "Account Manager",
-    image: "https://jets.partners/wp-content/uploads/2025/08/MPCL9375-scaled-e1754903997969.jpg",
+    image: "https://jets.partners/wp-content/uploads/2025/09/MPCL9925.jpg",
   },
   {
-    name: "Youssef Fazazi",
-    role: "Account Manager",
-    image: "https://jets.partners/wp-content/uploads/2025/08/MPCL9983-1-scaled-e1754904042722.jpg",
+    name: "Ismail Nouamani",
+    role: "HR & Admin Director",
+    image: "https://jets.partners/wp-content/uploads/2025/09/MPCL0053-3-scaled-e1759159993275-680x1024.jpg",
   },
   {
-    name: "Meriem Aboulouafa",
-    role: "Account Manager",
-    image: "https://jets.partners/wp-content/uploads/2025/08/MPCL9578.jpg",
+    name: "Mohamed Ali Ourihi",
+    role: "Full Stack Developer",
+    image: "https://jets.partners/wp-content/uploads/2025/10/kpdkzpd-scaled.jpg",
   },
 ];
 
-export default function SalesSection() {
+export default function AdminsSection() {
   const [navbarHeight, setNavbarHeight] = useState(0);
   const [showNavbar, setShowNavbar] = useState(true);
 
@@ -132,10 +132,10 @@ export default function SalesSection() {
         >
           <p className="text-slate-600 mb-2 tracking-wide uppercase text-sm">Meet our</p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-slate-900 mb-4">
-            Sales Team
+            ADMINS
           </h2>
           <p className="text-slate-600 text-lg sm:text-xl leading-relaxed">
-            Our sales team handles requests with speed, accuracy, and full market visibility. From sourcing to negotiation, they operate with discretion and control, managing complex acquisitions and placements across private, corporate, and government clients.
+            They provide the backbone of our daily execution and the infrastructure that keeps it running. Our administrative team safeguards compliance, coordinates documentation and schedules, and maintains clear communication across departments. Alongside them, our full-stack developer builds and maintains the internal tools and client-facing systems that streamline workflows, protect data, and keep information flowing in real time. Together, they deliver the structure, reliability, and technology every mission depends on.
           </p>
         </div>
 

@@ -4,6 +4,7 @@ import ManagementSection from "@/components/ManagementSection";
 import SalesSection from "@/components/SalesSection";
 import OperationsSection from "@/components/OperationsSection";
 import MarketingSection from "@/components/MarketingSection";
+import AdminsSection from "@/components/AdminsSection";
 import ValuesSection from "@/components/ValuesSection";
 import StatsSection from "@/components/StatsSection";
 import ContactSection from "@/components/ContactSection";
@@ -19,6 +20,7 @@ export default function Home() {
       <SalesSection />
       <OperationsSection />
       <MarketingSection />
+      <AdminsSection />
       <ValuesSection />
       <StatsSection />
       <ContactSection />

@@ -1,10 +1,10 @@
 
 Todo:
   ☐ use professional looking fonts
-  ☐ add the header
+  ✔ add the header @done(25-11-14 22:49)
   ☐ set up the professional looking gradient color
-  ☐ center vertically the third image if only there in the section
-  ☐ add admins team section
+  ✔ center vertically the third image if only there in the section @done(25-11-14 22:48)
+  ✔ add admins team section @done(25-11-14 22:49)
   ☐ dockerize the app
   ☐ add documentation
   ☐ deploy on vercel

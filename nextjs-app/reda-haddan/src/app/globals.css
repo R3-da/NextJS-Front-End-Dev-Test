@@ -25,3 +25,16 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: 'Kinetica';
+  src: url('/fonts/9403kinetica.woff2') format('woff2'),
+       url('/fonts/9403kinetica.woff') format('woff');
+  font-weight: 400; /* adjust if the font has different weights */
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-kinetica {
+  font-family: 'Kinetica', sans-serif;
+}

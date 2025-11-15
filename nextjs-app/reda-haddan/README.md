@@ -18,8 +18,6 @@ This is a Next.js project located at `nextjs-app/reda-haddan`, bootstrapped with
    ```
 3. Open http://localhost:3000 in your browser.
 
-Edits in `src/app/page.tsx` hot-reload automatically.
-
 ## Run with Docker
 This repo includes a development Dockerfile at `nextjs-app/reda-haddan/Dockerfile.dev`.
 
@@ -29,7 +27,12 @@ This repo includes a development Dockerfile at `nextjs-app/reda-haddan/Dockerfil
    docker build -f Dockerfile.dev -t nextjs-app-reda-haddan .
    ```
 
-Stop and remove the container:
+2. Run the container:
+   ```bash
+   docker run -p 3000:3000 nextjs-app-reda-haddan
+   ```
+
+3. Stop and remove the container:
 ```bash
 docker stop reda-haddan && docker rm reda-haddan
 ```
